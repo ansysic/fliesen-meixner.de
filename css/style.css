@@ -146,7 +146,8 @@ footer p {
 }
 
 .logo {
-    max-width: 300px; /* Adjust as needed */
+    max-width: 350px; /* Increased from 300px */
+    width: 100%; /* Ensures it scales with container */
     height: auto;
     margin-bottom: 1rem; /* Reduced Space below logo */
     box-shadow: none; /* Removed shadow */
@@ -210,8 +211,16 @@ footer p {
 
 /* Responsive adjustments for homepage */
 @media (max-width: 768px) {
+    .homepage-container {
+        padding: 1rem; /* Reduced padding to use more screen space */
+    }
+    .homepage-main {
+        max-width: 90%; /* Use more of the screen width */
+        width: 100%;
+    }
     .logo {
-        max-width: 250px;
+        max-width: 320px; /* Increased from 280px */
+        width: 90%; /* Use percentage of container width */
     }
     .homepage-main h2 {
         font-size: 1.5rem;
@@ -223,33 +232,50 @@ footer p {
 
 @media (max-width: 480px) {
     .homepage-container {
-        padding: 0.5rem; /* Further reduced padding */
+        padding: 0.5rem 0.25rem; /* Minimal horizontal padding */
+        width: 100%; /* Use full width */
     }
     .homepage-header {
-        margin-bottom: 0.5rem; /* Further reduced margin */
+        margin-bottom: 0.5rem;
         padding-top: 0.5rem;
+        width: 100%; /* Full width header */
     }
     .logo {
-        max-width: 180px; /* Slightly smaller logo */
-        margin-bottom: 0.5rem; /* Further reduced margin */
+        max-width: 85%; /* Use percentage of screen width instead of fixed size */
+        width: auto;
+        margin-bottom: 0.5rem;
     }
     .homepage-main {
-        margin-top: 0.5rem; /* Reduced top margin for main content */
+        margin-top: 0.5rem;
+        max-width: 95%; /* Use almost full width */
+        padding: 0 0.25rem; /* Minimal horizontal padding */
     }
     .homepage-main section {
-        padding-bottom: 0.25rem; /* Minimal padding */
-        margin-bottom: 0.5rem; /* Minimal margin */
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.5rem;
+        width: 100%; /* Full width sections */
     }
     .homepage-main h2 {
-        font-size: 1.2rem; /* Adjusted font size */
+        font-size: 1.2rem;
         margin-bottom: 0.25rem;
     }
-     .homepage-main p {
-        font-size: 0.9rem; /* Adjusted font size */
+    .homepage-main p {
+        font-size: 0.9rem;
         margin-bottom: 0.5rem;
     }
     .homepage-footer {
-        margin-top: 1rem; /* Reduced space above footer */
+        margin-top: 1rem;
         padding: 0.5rem;
+        width: 100%; /* Full width footer */
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .logo {
+        max-width: 95%; /* Even larger percentage for very small screens */
+    }
+    .homepage-main {
+        max-width: 100%; /* Full width on very small screens */
     }
 }
