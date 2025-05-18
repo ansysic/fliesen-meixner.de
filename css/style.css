@@ -86,6 +86,7 @@ footer {
     padding: 1.5rem 2rem;
     margin-top: auto; /* Pushes footer to the bottom */
     width: 100%; /* Ensure footer takes full width */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
 footer p {
@@ -131,15 +132,16 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align content to the top */
     text-align: center;
-    padding: 2rem 2rem 0 2rem; /* Remove bottom padding to avoid extra space before footer */
+    padding: 3rem 2rem 0 2rem; /* Increased top padding for better spacing */
     box-sizing: border-box; /* Ensures padding doesn't add to width/height */
     min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+    position: relative; /* For footer positioning */
 }
 
 .homepage-header {
-    margin-bottom: 1rem; /* Reduced space */
+    margin-bottom: 3rem; /* Increased space between logo and content */
     background-color: transparent; /* Blend with page background */
     border-bottom: none; /* Remove border inherited from general header */
     padding-top: 1rem; /* Add some top padding if needed */
@@ -150,7 +152,7 @@ footer p {
     max-width: 350px; /* Increased from 300px */
     width: 100%; /* Ensures it scales with container */
     height: auto;
-    margin-bottom: 1rem; /* Reduced Space below logo */
+    margin-bottom: 0; /* Remove bottom margin as we're using the header margin */
     box-shadow: none; /* Removed shadow */
     border-radius: 4px; /* Optional: slight rounding if the logo isn't already transparently shaped */
 }
@@ -162,18 +164,23 @@ footer p {
     padding: 0; /* Reset padding from general main style */
     max-width: 600px; /* Max width for homepage content */
     width: 100%;
+    margin-bottom: 3rem; /* Add space before footer */
 }
 
 .homepage-main section {
     border-bottom: none; /* No borders between sections on homepage */
-    padding-bottom: 0.5rem; /* Reduced padding */
-    margin-bottom: 1rem; /* Reduced margin */
+    padding-bottom: 0; /* Remove padding */
+    margin-bottom: 2.5rem; /* Increased margin between sections */
+}
+
+.homepage-main section:last-child {
+    margin-bottom: 0; /* No margin for last section */
 }
 
 .homepage-main h2 {
     font-size: 1.75rem; /* Slightly larger for homepage section titles */
     color: var(--ci-dark-gray);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem; /* Increased space between heading and content */
     font-weight: 600; /* Bolder section titles */
 }
 
@@ -181,6 +188,7 @@ footer p {
     font-size: 1.1rem;
     color: #555; /* Slightly lighter than default paragraph for a softer look */
     line-height: 1.6; /* Slightly reduced line-height */
+    margin-bottom: 0.75rem; /* Consistent margin */
 }
 
 .homepage-main a {
@@ -192,11 +200,15 @@ footer p {
 /* Responsive adjustments for homepage */
 @media (max-width: 768px) {
     .homepage-container {
-        padding: 1rem 1rem 0 1rem; /* Reduced padding, no bottom padding */
+        padding: 2rem 1rem 0 1rem; /* Adjusted padding for tablets */
+    }
+    .homepage-header {
+        margin-bottom: 2rem; /* Reduced spacing for tablets but still professional */
     }
     .homepage-main {
         max-width: 90%; /* Use more of the screen width */
         width: 100%;
+        margin-bottom: 2rem; /* Reduced spacing for tablets */
     }
     .logo {
         max-width: 320px; /* Increased from 280px */
@@ -204,44 +216,48 @@ footer p {
     }
     .homepage-main h2 {
         font-size: 1.5rem;
+        margin-bottom: 0.75rem; /* Adjusted for tablets */
     }
     .homepage-main p {
         font-size: 1rem;
+    }
+    .homepage-main section {
+        margin-bottom: 2rem; /* Adjusted spacing for tablets */
     }
 }
 
 @media (max-width: 480px) {
     .homepage-container {
-        padding: 0.5rem 0.25rem 0 0.25rem; /* Minimal horizontal padding, no bottom padding */
+        padding: 1.5rem 0.25rem 0 0.25rem; /* Increased top padding for mobile */
         width: 100%; /* Use full width */
     }
     .homepage-header {
-        margin-bottom: 0.5rem;
+        margin-bottom: 1.5rem; /* Adjusted for mobile but still professional */
         padding-top: 0.5rem;
         width: 100%; /* Full width header */
     }
     .logo {
         max-width: 85%; /* Use percentage of screen width instead of fixed size */
         width: auto;
-        margin-bottom: 0.5rem;
     }
     .homepage-main {
-        margin-top: 0.5rem;
+        margin-top: 0;
         max-width: 95%; /* Use almost full width */
         padding: 0 0.25rem; /* Minimal horizontal padding */
+        margin-bottom: 1.5rem; /* Space before footer on mobile */
     }
     .homepage-main section {
-        padding-bottom: 0.25rem;
-        margin-bottom: 0.5rem;
+        padding-bottom: 0;
+        margin-bottom: 1.5rem; /* Consistent spacing on mobile */
         width: 100%; /* Full width sections */
     }
     .homepage-main h2 {
         font-size: 1.2rem;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.5rem; /* Consistent spacing */
     }
     .homepage-main p {
         font-size: 0.9rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem; /* Consistent spacing */
     }
     footer {
         margin-top: 1rem;
@@ -258,4 +274,15 @@ footer p {
     .homepage-main {
         max-width: 100%; /* Full width on very small screens */
     }
+}
+
+/* Homepage footer specific styles */
+.homepage-container footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+    box-sizing: border-box;
 }
