@@ -1,0 +1,21 @@
+{
+  "name": "Fliesen Meixner GmbH",
+  "short_name": "Fliesen Meixner",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#bd964a",
+  "icons": [
+    {
+      "src": "img/logo_i_681.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo_i_681.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
