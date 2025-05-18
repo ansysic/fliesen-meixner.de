@@ -192,7 +192,7 @@ footer p {
 /* Responsive adjustments for homepage */
 @media (max-width: 768px) {
     .homepage-container {
-        padding: 1rem; /* Reduced padding to use more screen space */
+        padding: 1rem 1rem 0 1rem; /* Reduced padding, no bottom padding */
     }
     .homepage-main {
         max-width: 90%; /* Use more of the screen width */
@@ -212,7 +212,7 @@ footer p {
 
 @media (max-width: 480px) {
     .homepage-container {
-        padding: 0.5rem 0.25rem; /* Minimal horizontal padding */
+        padding: 0.5rem 0.25rem 0 0.25rem; /* Minimal horizontal padding, no bottom padding */
         width: 100%; /* Use full width */
     }
     .homepage-header {
