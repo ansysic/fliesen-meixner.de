@@ -138,14 +138,18 @@ footer p {
 }
 
 .homepage-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* Reduced space */
+    background-color: transparent; /* Blend with page background */
+    border-bottom: none; /* Remove border inherited from general header */
+    padding-top: 1rem; /* Add some top padding if needed */
+    padding-bottom: 0;
 }
 
 .logo {
     max-width: 300px; /* Adjust as needed */
     height: auto;
-    margin-bottom: 1.5rem; /* Increased Space below logo */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow for lift */
+    margin-bottom: 1rem; /* Reduced Space below logo */
+    box-shadow: none; /* Removed shadow */
     border-radius: 4px; /* Optional: slight rounding if the logo isn't already transparently shaped */
 }
 
@@ -160,8 +164,8 @@ footer p {
 
 .homepage-main section {
     border-bottom: none; /* No borders between sections on homepage */
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem; /* Reduced padding */
+    margin-bottom: 1rem; /* Reduced margin */
 }
 
 .homepage-main h2 {
@@ -187,7 +191,7 @@ footer p {
     background-color: #f8f9fa; /* Lighter footer for homepage */
     color: var(--ci-dark-gray); /* Darker text for light background */
     padding: 1rem;
-    margin-top: 3rem; /* Increased space above footer */
+    margin-top: 1.5rem; /* Reduced space above footer */
     border-top: 1px solid #e9ecef;
 }
 
@@ -219,15 +223,33 @@ footer p {
 
 @media (max-width: 480px) {
     .homepage-container {
-        padding: 1rem;
+        padding: 0.5rem; /* Further reduced padding */
+    }
+    .homepage-header {
+        margin-bottom: 0.5rem; /* Further reduced margin */
+        padding-top: 0.5rem;
     }
     .logo {
-        max-width: 200px;
+        max-width: 180px; /* Slightly smaller logo */
+        margin-bottom: 0.5rem; /* Further reduced margin */
+    }
+    .homepage-main {
+        margin-top: 0.5rem; /* Reduced top margin for main content */
+    }
+    .homepage-main section {
+        padding-bottom: 0.25rem; /* Minimal padding */
+        margin-bottom: 0.5rem; /* Minimal margin */
     }
     .homepage-main h2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem; /* Adjusted font size */
+        margin-bottom: 0.25rem;
     }
      .homepage-main p {
-        font-size: 0.95rem;
+        font-size: 0.9rem; /* Adjusted font size */
+        margin-bottom: 0.5rem;
+    }
+    .homepage-footer {
+        margin-top: 1rem; /* Reduced space above footer */
+        padding: 0.5rem;
     }
 }
