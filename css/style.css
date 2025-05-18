@@ -85,6 +85,7 @@ footer {
     text-align: center;
     padding: 1.5rem 2rem;
     margin-top: auto; /* Pushes footer to the bottom */
+    width: 100%; /* Ensure footer takes full width */
 }
 
 footer p {
@@ -128,13 +129,13 @@ footer p {
 /* Homepage Specific Styles */
 .homepage-container {
     display: flex;
-    flex: 1;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem; /* Remove bottom padding to avoid extra space before footer */
     box-sizing: border-box; /* Ensures padding doesn't add to width/height */
+    min-height: 100vh; /* Ensure it takes up at least the full viewport height */
 }
 
 .homepage-header {
@@ -185,27 +186,6 @@ footer p {
 .homepage-main a {
     font-weight: 500; /* Make links slightly bolder */
     transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out; /* Smooth transition */
-}
-
-.homepage-footer {
-    width: 100%;
-    background-color: #f8f9fa; /* Lighter footer for homepage */
-    color: var(--ci-dark-gray); /* Darker text for light background */
-    padding: 1rem;
-    margin-top: 1.5rem; /* Reduced space above footer */
-    border-top: 1px solid #e9ecef;
-}
-
-.homepage-footer p {
-    color: var(--ci-dark-gray);
-}
-
-.homepage-footer a {
-    color: var(--ci-gold);
-}
-
-.homepage-footer a:hover {
-    color: var(--ci-gold-darker);
 }
 
 
@@ -263,7 +243,7 @@ footer p {
         font-size: 0.9rem;
         margin-bottom: 0.5rem;
     }
-    .homepage-footer {
+    footer {
         margin-top: 1rem;
         padding: 0.5rem;
         width: 100%; /* Full width footer */
