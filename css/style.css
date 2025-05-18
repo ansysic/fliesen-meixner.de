@@ -15,6 +15,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling at the body level */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Header Styles */
@@ -227,9 +230,13 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
     .homepage-container {
-        padding: 1.5rem 0.25rem 0 0.25rem; /* Increased top padding for mobile */
+        padding: 1.5rem 0 0 0; /* Remove horizontal padding */
         width: 100%; /* Use full width */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
     }
     .homepage-header {
         margin-bottom: 1.5rem; /* Adjusted for mobile but still professional */
@@ -243,8 +250,8 @@ footer p {
     .homepage-main {
         margin-top: 0;
         max-width: 95%; /* Use almost full width */
-        padding: 0 0.25rem; /* Minimal horizontal padding */
-        margin-bottom: 1.5rem; /* Space before footer on mobile */
+        padding: 0; /* Remove horizontal padding */
+        margin-bottom: 4rem; /* Increased space before footer on mobile */
     }
     .homepage-main section {
         padding-bottom: 0;
@@ -261,8 +268,9 @@ footer p {
     }
     footer {
         margin-top: 1rem;
-        padding: 0.5rem;
+        padding: 1rem;
         width: 100%; /* Full width footer */
+        box-sizing: border-box;
     }
 }
 
@@ -282,7 +290,8 @@ footer p {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100vw;
-    margin-left: calc(-1 * (100vw - 100%) / 2);
+    width: 100%;
     box-sizing: border-box;
+    overflow-x: hidden;
+    padding: 1rem;
 }
