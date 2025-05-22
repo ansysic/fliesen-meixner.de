@@ -17,54 +17,131 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="homepage-container">
-        <header class="homepage-header">
-            <img src="img/logo_588.png" alt="Fliesen Meixner GmbH Logo" class="logo" loading="lazy">
-            <p class="tagline">Qualität und Handwerk seit Generationen</p>
+    <div class="newspaper-container">
+        <!-- Newspaper Header -->
+        <header class="newspaper-header">
+            <div class="header-top">
+                <div class="date-weather">
+                    <span class="date" id="current-date"></span>
+                    <span class="location">Freystadt, Bayern</span>
+                </div>
+                <div class="edition">Ausgabe Nr. 1</div>
+            </div>
+            
+            <div class="masthead">
+                <h1 class="newspaper-title">FLIESEN MEIXNER</h1>
+                <p class="subtitle">Handwerkszeitung für Qualität und Tradition</p>
+                <div class="header-line"></div>
+            </div>
         </header>
 
-        <main class="homepage-main">
-            <section class="company-section">
-                <h2>Unser Standort</h2>
-                <div class="content-card">
-                    <h3>Fliesen Meixner GmbH</h3>
-                    <div class="address-info">
-                        <p>
-                            Schmellnricht B 16<br>
-                            D-92342 Freystadt
+        <!-- Main Content in Newspaper Layout -->
+        <main class="newspaper-main">
+            <!-- Lead Story -->
+            <article class="lead-story">
+                <header class="article-header">
+                    <h2 class="headline">Qualität und Handwerk seit Generationen</h2>
+                    <p class="byline">Von der Redaktion | Fliesen Meixner GmbH</p>
+                </header>
+                
+                <div class="article-content">
+                    <div class="article-text">
+                        <p class="lead-paragraph">
+                            <span class="drop-cap">S</span>eit Generationen steht der Name Meixner für erstklassige Fliesenarbeiten und handwerkliche Perfektion. 
+                            Unser Familienbetrieb in Freystadt verbindet traditionelle Handwerkskunst mit modernsten Techniken.
                         </p>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Fliesen+Meixner+GmbH+Schmellnricht+B+16+D-92342+Freystadt" target="_blank" rel="noopener noreferrer" class="map-link">
-                            Auf Google Maps anzeigen
-                        </a>
+                        <p>
+                            Von der klassischen Badezimmergestaltung bis hin zu innovativen Großprojekten – 
+                            wir setzen Ihre Visionen mit Präzision und Leidenschaft um.
+                        </p>
                     </div>
+                    
+                    <aside class="company-info-box">
+                        <h3>Unser Standort</h3>
+                        <div class="info-content">
+                            <img src="img/logo_588.png" alt="Fliesen Meixner GmbH Logo" class="company-logo" loading="lazy">
+                            <div class="address-details">
+                                <strong>Fliesen Meixner GmbH</strong><br>
+                                Schmellnricht B 16<br>
+                                D-92342 Freystadt
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Fliesen+Meixner+GmbH+Schmellnricht+B+16+D-92342+Freystadt" 
+                               target="_blank" rel="noopener noreferrer" class="map-button">
+                                📍 Auf Karte anzeigen
+                            </a>
+                        </div>
+                    </aside>
                 </div>
-            </section>
+            </article>
 
-            <section class="contact-section">
-                <h2>Kontakt</h2>
-                <div class="content-card">
-                    <div class="contact-info">
+            <!-- Contact Section as News Column -->
+            <section class="news-columns">
+                <article class="news-column">
+                    <header class="column-header">
+                        <h3 class="column-title">Kontakt & Service</h3>
+                        <div class="column-line"></div>
+                    </header>
+                    
+                    <div class="column-content">
                         <div class="contact-item">
-                            <span class="contact-label">Telefon:</span>
-                            <a href="tel:+4984698485002">08469 8485002</a>
+                            <h4>Telefon</h4>
+                            <a href="tel:+4984698485002" class="contact-link">08469 8485002</a>
+                            <p class="contact-note">Montag bis Freitag, 8:00 - 17:00 Uhr</p>
                         </div>
+                        
                         <div class="contact-item">
-                            <span class="contact-label">E-Mail:</span>
-                            <a href="mailto:info@fliesen-meixner.de">info@fliesen-meixner.de</a>
+                            <h4>E-Mail</h4>
+                            <a href="mailto:info@fliesen-meixner.de" class="contact-link">info@fliesen-meixner.de</a>
+                            <p class="contact-note">Schnelle Antwort garantiert</p>
                         </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="news-column">
+                    <header class="column-header">
+                        <h3 class="column-title">Unsere Leistungen</h3>
+                        <div class="column-line"></div>
+                    </header>
+                    
+                    <div class="column-content">
+                        <ul class="services-list">
+                            <li>Badezimmergestaltung</li>
+                            <li>Küchenfliesierung</li>
+                            <li>Terrassenbeläge</li>
+                            <li>Natursteinarbeiten</li>
+                            <li>Reparatur & Sanierung</li>
+                            <li>Beratung & Planung</li>
+                        </ul>
+                    </div>
+                </article>
             </section>
         </main>
 
-        <footer class="homepage-footer">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Fliesen Meixner GmbH</p>
-            <div class="footer-links">
-                <a href="impressum.html">Impressum</a>
-                <span class="separator">•</span>
-                <a href="datenschutz.html">Datenschutz</a>
+        <!-- Newspaper Footer -->
+        <footer class="newspaper-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Fliesen Meixner GmbH</p>
+                </div>
+                <div class="footer-section">
+                    <nav class="footer-nav">
+                        <a href="impressum.html">Impressum</a>
+                        <span class="separator">|</span>
+                        <a href="datenschutz.html">Datenschutz</a>
+                    </nav>
+                </div>
             </div>
         </footer>
     </div>
+
+    <script>
+        // Set current date
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('de-DE', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
 </body>
 </html>
