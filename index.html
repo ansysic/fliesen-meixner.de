@@ -2,48 +2,120 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Fliesen Meixner GmbH - Ihr Experte für Fliesen</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#bd964a">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    
+    <!-- SEO Meta Tags -->
+    <title>Fliesen Meixner GmbH - Ihr Experte für Fliesen in Freystadt</title>
+    <meta name="description" content="Fliesen Meixner GmbH in Freystadt - Ihr zuverlässiger Partner für hochwertige Fliesenarbeiten. Kontaktieren Sie uns unter 08469 8485002.">
+    <meta name="keywords" content="Fliesen, Fliesenleger, Freystadt, Schmellnricht, Fliesen Meixner">
+    <meta name="author" content="Fliesen Meixner GmbH">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Fliesen Meixner GmbH - Ihr Experte für Fliesen">
+    <meta property="og:description" content="Ihr zuverlässiger Partner für hochwertige Fliesenarbeiten in Freystadt und Umgebung.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fliesen-meixner.de">
+    <meta property="og:image" content="https://fliesen-meixner.de/img/logo_588.png">
+    
+    <!-- Favicon and App Icons -->
     <link rel="icon" href="img/logo_i_681.png" sizes="512x512" type="image/png">
     <link rel="apple-touch-icon" href="img/logo_i_681.png" sizes="152x152">
+    
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#bd964a">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Fliesen Meixner">
     <meta name="msapplication-TileColor" content="#bd964a">
     <meta name="msapplication-TileImage" content="img/logo_i_681.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Fliesen Meixner GmbH",
+        "image": "https://fliesen-meixner.de/img/logo_588.png",
+        "telephone": "+4984698485002",
+        "email": "info@fliesen-meixner.de",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Schmellnricht B 16",
+            "addressLocality": "Freystadt",
+            "postalCode": "92342",
+            "addressCountry": "DE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "49.1989",
+            "longitude": "11.3289"
+        }
+    }
+    </script>
+    
+    <!-- Scripts -->
     <script src="js/script.js" defer></script>
 </head>
 <body>
     <div class="homepage-container">
-        <header class="homepage-header">
-            <img src="img/logo_588.png" alt="Fliesen Meixner GmbH Logo" class="logo" loading="lazy">
+        <header class="homepage-header" role="banner">
+            <h1 class="visually-hidden">Fliesen Meixner GmbH</h1>
+            <img src="img/logo_588.png" 
+                 alt="Fliesen Meixner GmbH Logo" 
+                 class="logo" 
+                 width="588" 
+                 height="auto"
+                 loading="eager">
         </header>
 
-        <main class="homepage-main">
-            <section class="address-section">
-                <h2>Fliesen Meixner GmbH</h2>
-                <p>
+        <main class="homepage-main" role="main">
+            <section class="address-section" aria-labelledby="company-heading">
+                <h2 id="company-heading">Fliesen Meixner GmbH</h2>
+                <address>
                     Schmellnricht B 16<br>
                     D-92342 Freystadt<br>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Fliesen+Meixner+GmbH+Schmellnricht+B+16+D-92342+Freystadt" target="_blank" rel="noopener noreferrer">Auf Google Maps anzeigen</a>
-                </p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Fliesen+Meixner+GmbH+Schmellnricht+B+16+D-92342+Freystadt" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Fliesen Meixner GmbH auf Google Maps anzeigen (öffnet in neuem Tab)">
+                        Auf Google Maps anzeigen
+                    </a>
+                </address>
             </section>
 
-            <section class="contact-section">
-                <h2>Kontakt</h2>
-                <p>
-                    Telefon: <a href="tel:+4984698485002">08469 8485002</a><br>
-                    E-Mail: <a href="mailto:info@fliesen-meixner.de">info@fliesen-meixner.de</a>
-                </p>
+            <section class="contact-section" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Kontakt</h2>
+                <div class="contact-info">
+                    <p>
+                        <span class="contact-label">Telefon:</span> 
+                        <a href="tel:+4984698485002" aria-label="Anrufen: 08469 8485002">08469 8485002</a>
+                    </p>
+                    <p>
+                        <span class="contact-label">E-Mail:</span> 
+                        <a href="mailto:info@fliesen-meixner.de" aria-label="E-Mail senden an info@fliesen-meixner.de">info@fliesen-meixner.de</a>
+                    </p>
+                </div>
             </section>
         </main>
 
-        <footer>
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Fliesen Meixner GmbH - <a href="impressum.html">Impressum</a> - <a href="datenschutz.html">Datenschutz</a></p>
+        <footer role="contentinfo">
+            <p>
+                <span>&copy; <span id="current-year">2025</span> Fliesen Meixner GmbH</span>
+                <span class="footer-separator" aria-hidden="true">-</span>
+                <a href="impressum.html" aria-label="Zum Impressum">Impressum</a>
+                <span class="footer-separator" aria-hidden="true">-</span>
+                <a href="datenschutz.html" aria-label="Zur Datenschutzerklärung">Datenschutz</a>
+            </p>
         </footer>
     </div>
+    
+    <script>
+        // Update copyright year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
