@@ -1,13 +1,178 @@
 <!doctype html>
-<html>
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fliesen Meixner GmbH - Ihr Experte für Fliesen in Freystadt</title>
+    <meta name="description" content="Fliesen Meixner GmbH in Freystadt - Ihr zuverlässiger Partner für hochwertige Fliesenarbeiten. Kontaktieren Sie uns unter 08469 8485002.">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="tailwindcss">
+      @config {
+        theme: {
+          extend: {
+            colors: {
+              'ci-gold': '#bd964a',
+              'ci-gold-light': '#d4b366',
+              'ci-gold-dark': '#a17d3a',
+              'ci-dark-gray': '#555858',
+              'ci-light-gray': '#f8f9fa',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.8s ease-in-out',
+              'slide-up': 'slideUp 0.6s ease-out',
+              'float': 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .tile-pattern {
+        background-image: 
+          linear-gradient(45deg, rgba(189, 150, 74, 0.05) 25%, transparent 25%), 
+          linear-gradient(-45deg, rgba(189, 150, 74, 0.05) 25%, transparent 25%), 
+          linear-gradient(45deg, transparent 75%, rgba(189, 150, 74, 0.05) 75%), 
+          linear-gradient(-45deg, transparent 75%, rgba(189, 150, 74, 0.05) 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      }
+      
+      .gradient-gold {
+        background: linear-gradient(135deg, #bd964a 0%, #d4b366 50%, #a17d3a 100%);
+      }
+      
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    </style>
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+  <body class="bg-gradient-to-br from-ci-light-gray via-white to-gray-100 min-h-screen tile-pattern">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+      <!-- Header with Logo -->
+      <header class="text-center mb-16 animate-fade-in">
+        <div class="relative">
+          <img src="img/logo_588.png" alt="Fliesen Meixner GmbH Logo" class="mx-auto mb-8 max-w-xs h-auto animate-float drop-shadow-lg">
+          <div class="absolute inset-0 bg-gradient-to-r from-ci-gold/20 to-ci-gold-light/20 rounded-full blur-3xl -z-10 transform scale-150"></div>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-ci-dark-gray to-ci-gold bg-clip-text text-transparent mb-4 animate-slide-up">
+          Fliesen Meixner GmbH
+        </h1>
+        <p class="text-xl md:text-2xl text-ci-dark-gray font-medium animate-slide-up" style="animation-delay: 0.2s;">
+          Ihr Experte für Fliesen in Freystadt
+        </p>
+        <div class="mt-6 w-24 h-1 gradient-gold mx-auto rounded-full animate-slide-up" style="animation-delay: 0.4s;"></div>
+      </header>
+
+      <!-- Main Content Grid -->
+      <main class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- Location Section -->
+        <section class="bg-white/90 backdrop-blur-sm rounded-xl shadow-xl p-8 border-l-4 border-ci-gold card-hover animate-slide-up relative overflow-hidden" style="animation-delay: 0.6s;">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-ci-gold/10 to-ci-gold-light/5 rounded-full -translate-y-16 translate-x-16"></div>
+          <h2 class="text-2xl font-semibold text-ci-gold mb-6 flex items-center">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            Unser Standort
+          </h2>
+          <address class="not-italic text-ci-dark-gray leading-relaxed">
+            <div class="font-semibold text-lg mb-2">Fliesen Meixner GmbH</div>
+            <div class="mb-1">Schmellnricht B 16</div>
+            <div class="mb-4">D-92342 Freystadt</div>
+          </address>
+          <a href="https://www.google.com/maps/search/?api=1&query=Fliesen+Meixner+GmbH+Schmellnricht+B+16+D-92342+Freystadt" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-flex items-center px-6 py-3 gradient-gold text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 font-medium">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            </svg>
+            Auf Google Maps anzeigen
+          </a>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="bg-white/90 backdrop-blur-sm rounded-xl shadow-xl p-8 border-l-4 border-ci-gold card-hover animate-slide-up relative overflow-hidden" style="animation-delay: 0.8s;">
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-ci-gold/10 to-ci-gold-light/5 rounded-full translate-y-12 -translate-x-12"></div>
+          <h2 class="text-2xl font-semibold text-ci-gold mb-6 flex items-center">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            Kontakt
+          </h2>
+          <div class="space-y-4">
+            <div class="bg-ci-light-gray/50 rounded-lg p-4 border border-ci-gold/20">
+              <div class="font-semibold text-ci-dark-gray mb-2 flex items-center">
+                <svg class="w-4 h-4 mr-2 text-ci-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                Telefon:
+              </div>
+              <a href="tel:+4984698485002" 
+                 class="text-ci-gold hover:text-ci-gold-dark text-xl font-bold transition-colors duration-200 block">
+                08469 8485002
+              </a>
+            </div>
+            <div class="bg-ci-light-gray/50 rounded-lg p-4 border border-ci-gold/20">
+              <div class="font-semibold text-ci-dark-gray mb-2 flex items-center">
+                <svg class="w-4 h-4 mr-2 text-ci-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                E-Mail:
+              </div>
+              <a href="mailto:info@fliesen-meixner.de" 
+                 class="text-ci-gold hover:text-ci-gold-dark text-lg font-medium transition-colors duration-200 break-all block">
+                info@fliesen-meixner.de
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="text-center py-12 border-t border-ci-gold/20 bg-white/50 backdrop-blur-sm rounded-t-xl animate-fade-in" style="animation-delay: 1s;">
+        <div class="text-ci-dark-gray">
+          <div class="mb-4">
+            <div class="w-16 h-1 gradient-gold mx-auto rounded-full mb-4"></div>
+          </div>
+          <p class="mb-4 text-lg font-medium">
+            &copy; <span id="current-year">2025</span> Fliesen Meixner GmbH
+          </p>
+          <div class="flex justify-center items-center space-x-6">
+            <a href="impressum.html" class="text-ci-gold hover:text-ci-gold-dark transition-colors duration-200 font-medium px-4 py-2 rounded-lg hover:bg-ci-gold/10">
+              Impressum
+            </a>
+            <div class="w-2 h-2 bg-ci-gold rounded-full"></div>
+            <a href="datenschutz.html" class="text-ci-gold hover:text-ci-gold-dark transition-colors duration-200 font-medium px-4 py-2 rounded-lg hover:bg-ci-gold/10">
+              Datenschutz
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script>
+      // Update copyright year dynamically
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
